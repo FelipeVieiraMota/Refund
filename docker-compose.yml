@@ -1,0 +1,13 @@
+version : "3.3"
+services:
+  api-refund:
+      build:
+        context: "."
+      environment:
+        entity_id: 8ac7a4ca6db97ef1016dbe9214e70aac
+        Authentication: OGFjN2E0Y2E2ZGI5N2VmMTAxNmRiZTkwZTMxZDBhYTh8WENkRUs0NHJubQ==
+        # dockerfile: "" If we changed Dockerfile name we can put it here in this line
+      container_name: refund-container
+      restart: always
+      ports:
+          - "8882:8882"
