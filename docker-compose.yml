@@ -1,13 +1,22 @@
 version : "3.3"
+
+networks:
+  custom:
+    external: true
+
 services:
   api-refund:
       build:
         context: "."
+      image: app/refund:alphine
       environment:
         entity_id: 8ac7a4ca6db97ef1016dbe9214e70aac
-        Authentication: OGFjN2E0Y2E2ZGI5N2VmMTAxNmRiZTkwZTMxZDBhYTh8WENkRUs0NHJubQ==
+        authentication: Bearer OGFjN2E0Y2E2ZGI5N2VmMTAxNmRiZTkwZTMxZDBhYTh8WENkRUs0NHJubQ==
+        url_end_point: https://test.oppwa.com/v1/payments
         # dockerfile: "" If we changed Dockerfile name we can put it here in this line
       container_name: refund-container
       restart: always
+      networks:
+        - custom
       ports:
           - "8882:8882"
