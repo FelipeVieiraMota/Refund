@@ -6,9 +6,10 @@ networks:
 
 services:
   api-refund:
-      build:
-        context: "."
-      image: app/refund:alphine
+      #build:
+      #  context: "."
+      #image: refund
+      image: felipemotadocker/refund:1.0.0
       environment:
         entity_id: 8ac7a4ca6db97ef1016dbe9214e70aac
         authentication: Bearer OGFjN2E0Y2E2ZGI5N2VmMTAxNmRiZTkwZTMxZDBhYTh8WENkRUs0NHJubQ==

@@ -13,5 +13,5 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @ExtendWith(VertxExtension.class)
 public class TestMainVerticle {
-  
+
 }

@@ -6,7 +6,7 @@
 #   export JAVA_HOME &&
 #   mvn clean &&
 #   ./mvnw install &&
-#   docker build -t app/refund:alphine . &&
+#   docker build -t refund . &&
 #   docker run -p 8882:8882 refund
 #*****************************************************************
 
